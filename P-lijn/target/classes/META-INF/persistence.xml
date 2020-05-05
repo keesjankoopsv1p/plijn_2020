@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+<persistence-unit name="junit" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>Domain.Reiziger</class>
+    <class>Domain.OVChipkaart</class>
+    <class>Domain.Adres</class>
+    <class>Domain.OVChipkaartProduct</class>
+    <class>Domain.Product</class>
+    
+    <properties>
+<!--        <property name="dialect" value="">org.hibernate.dialect.Oracle10gDialect</property>-->
+        <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="javax.persistence.jdbc.user" value="plijn"/>
+        <property name="javax.persistence.jdbc.password" value="plijn007"/>
+    </properties>
+
+</persistence-unit>
+</persistence>
